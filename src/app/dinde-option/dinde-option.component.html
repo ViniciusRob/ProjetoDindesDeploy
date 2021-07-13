@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 my-3">
+      <h3 class="text-center">
+        Parece que você ainda não tem uma Dinda! Não se preocupe, escolha uma a
+        seguir:
+      </h3>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-12 d-flex justify-content-around">
+      <div *ngFor="let user of listaUser">
+        <div *ngIf='user.tipo=="dinde"'>
+        <div class="form-check form-check-inline">
+          <input
+            (input)='dindeId($event)'
+            class="form-check-input"
+            type="radio"
+            name="inlineRadioOptions"
+            id="inlineRadio1"
+            value="{{user.id}}"
+          />
+          <label class="form-check-label" for="inlineRadio1">
+            <div class="card my-3" style="width: 18rem;">
+                <img src="{{user.foto}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{user.nome}}</h5>
+                  <p class="card-text">{{user.area}}</p>
+                  <p class="card-text">{{user.sobre}}</p>
+                </div>
+              </div>
+          </label>
+        </div>
+    </div>
+      </div>
+    </div>
+  </div>
+  <div class="row my-2">
+      <div class="col-md-12">
+        <h5 class="text-center"> Para confirmar, digite sua senha:</h5>
+        <div class="form-group">
+            <label for="senha"> Para continuar, digite sua senha: </label>
+            <input type="password" class="form-control" name="senha" id="senha" (input)='confirmSenha($event)'>
+        </div>
+        <div class="form-group">
+            <label for="senha"> Confirmar senha </label>
+            <input type="password" class="form-control" name="confirmSenha" id="confirmSenha" [(ngModel)]='user.senha'>
+        </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-md-12 d-flex justify-content-center mb-3">
+          <button class="btn btn-danger me-3" routerLink='/home'> Cancelar </button>
+          <button class="btn btn-success" (click)='alterarUser()'> Confirmar </button>
+      </div>
+  </div>
+</div>

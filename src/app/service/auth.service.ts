@@ -25,6 +25,17 @@ export class AuthService {
     }
   }
 
+  getAllUser(): Observable<User[]>{
+    return this.http.get<User[]>('https://dindes.herokuapp.com/usuarios/all')
+  }
+
+  getByIdUser(id: number): Observable<User>{
+    return this.http.get<User>(`https://dindes.herokuapp.com/usuarios/${id}`)
+  }
+
+  putUsuario(user: User): Observable<User>{
+    return this.http.put<User>('https://dindes.herokuapp.com/usuarios/alterar', user)
+  }
 
   entrar(userLogin: UserLogin): Observable<UserLogin>{
     return this.http.post<UserLogin>('https://dindes.herokuapp.com/usuarios/logar', userLogin)
@@ -44,12 +55,27 @@ export class AuthService {
     return ok
   }
 
-  getByIdUser(id: number): Observable<User>{
-    return this.http.get<User>(`https://dindes.herokuapp.com/usuarios/${id}`)
+  dinde(){
+    let ok = false
+
+    if(environment.tipo == 'dinde'){
+      ok = true
+    }
+
+    return ok
+
   }
 
-  putUsuario(user: User): Observable<User>{
-    return this.http.put<User>('https://dindes.herokuapp.com/usuarios/alterar', user)
+  apadrinhade(){
+    let ok = false
+
+    if(environment.tipo == 'apadrinhade'){
+      ok = true
+    }
+
+    return ok
+
   }
+
 
 }

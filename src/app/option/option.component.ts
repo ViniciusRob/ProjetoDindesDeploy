@@ -30,6 +30,7 @@ export class OptionComponent implements OnInit {
 
   apadrinhade(){
     environment.tipo = "apadrinhade"
+    
     this.router.navigate(['/cadastrar'])
   }
 

@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { PostagemDeleteComponent } from './delet/postagem-delete/postagem-delete.component';
 import { TemaDeleteComponent } from './delet/tema-delete/tema-delete.component';
+import { DindeOptionComponent } from './dinde-option/dinde-option.component';
+import { DindeComponent } from './dinde/dinde.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
@@ -28,7 +30,9 @@ const routes: Routes = [
   {path: 'postagem-edit/:id', component: PostagemEditComponent},
   {path: 'usuario-edit/:id', component: UsuarioEditComponent},
   {path: 'temas', component: TemasComponent},
-  {path: 'vagas', component: VagasComponent}
+  {path: 'vagas', component: VagasComponent},
+  {path: 'dinde', component: DindeComponent},
+  {path: 'dinde-option', component: DindeOptionComponent}
 
 ];
 

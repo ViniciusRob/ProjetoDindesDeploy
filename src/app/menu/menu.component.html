@@ -34,9 +34,14 @@
             >Home</a
           >
         </li>
-        <li class="nav-item">
-          <a class="nav-link border-end border-light pe-3 ps-3" href="#"
+        <li *ngIf='auth.apadrinhade()' class="nav-item">
+          <a class="nav-link border-end border-light pe-3 ps-3" (click)='dinde()'
             >Minha Dinde</a
+          >
+        </li>
+        <li *ngIf='auth.dinde()' class="nav-item">
+          <a class="nav-link border-end border-light pe-3 ps-3" href="#"
+            >Minha apadrinhada</a
           >
         </li>
         <li class="nav-item">
