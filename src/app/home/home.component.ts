@@ -26,6 +26,9 @@ export class HomeComponent implements OnInit {
   user: User = new User()
   idUser = environment.id
 
+  key = 'data';
+  reverse = true;
+
 
   foto = environment.foto
   nome = environment.nome
@@ -72,12 +75,6 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  // metodos de postagem
-
-  // temaPostagem(event: any){
-  //   this.postagem.tema = event.target.value;
-  // }
-
   findByIdTema(){
     this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) =>{
       this.tema = resp
@@ -105,16 +102,11 @@ export class HomeComponent implements OnInit {
       let vaga = true;
       this.postagem.vaga = vaga;
     }
-
-    
   }
 
   midia(event: any){
     this.postagem.midia = event.target.value
-
   }
-
-  
 
   cadastrarPostagem(){
    this.tema.id = this.idTema
@@ -130,6 +122,4 @@ export class HomeComponent implements OnInit {
       this.postagem = new Postagem()
     })
   }
-
-
 }
