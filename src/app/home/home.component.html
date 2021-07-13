@@ -103,7 +103,7 @@
       <!-- /lugar onde posta -->
 
       <!-- postagens -->
-      <div *ngFor="let post of listaPostagem">
+      <div *ngFor="let post of listaPostagem | orderBy: key : reverse">
         <div class="row">
           <div class="card w-100 p-3 mt-2">
             <a href="#" class="card-link p-3 text-decoration-none green">

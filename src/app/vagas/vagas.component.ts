@@ -33,6 +33,9 @@ export class VagasComponent implements OnInit {
   postagem: Postagem = new Postagem()
   listaPostagem: Postagem[]
 
+  key = 'data';
+  reverse = true;
+
   findAllPostagem(){
     this.postagemService.getAllPostagem().subscribe((resp: Postagem[]) =>{
       this.listaPostagem = resp
