@@ -6,7 +6,7 @@
     </div>
 
     <div class="row">
-        <div *ngFor="let post of listaPostagem">
+        <div *ngFor="let post of listaPostagem | orderBy: key : reverse">
             <div *ngIf='post.vaga == true'>
           <div class="row">
             <div class="card w-100 p-3 mt-2">
