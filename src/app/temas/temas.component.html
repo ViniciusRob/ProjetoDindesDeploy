@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Pesquise postagens por tema</h3>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center mt-5 mb-5">
+    <div class="col-md-4">
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          id="nome"
+          placeholder="Digite um tema para pesquisar"
+          [(ngModel)]="nomeTema"
+          (keyup)="findByNomeTema()"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div *ngFor="let tema of listaTemas">
+  
+      <h4>{{ tema.nomeTema }}</h4>
+      <div *ngFor="let post of tema.postagem">
+        <div class="row">
+          <div class="card w-100 p-3 mt-2">
+            <a href="#" class="card-link p-3 text-decoration-none green">
+              <h5>{{ post.usuario.nome }}</h5>
+            </a>
+
+            <p>
+              {{ post.data | date: "dd/MM/yyyy" }} às
+              {{ post.data | date: "HH:mm" }}
+            </p>
+            <div class="card-body">
+              <!-- <h5 class="card-title">Isso é uma postagem</h5> -->
+              <p class="card-text">
+                {{ post.texto }}
+              </p>
+            </div>
+            <img src="{{ post.midia }}" class="card-img-bottom" alt="..." />
+            <a [routerLink]="['/postagem-edit', post.id]"
+              ><i class="fa fa-pencil-square-o" aria-hidden="true"></i
+            ></a>
+            <a [routerLink]="['/postagem-delet', post.id]"
+              ><i class="fa fa-trash-o" aria-hidden="true"></i
+            ></a>
+            <a href=""><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

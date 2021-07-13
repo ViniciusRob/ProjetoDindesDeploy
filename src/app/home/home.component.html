@@ -1,0 +1,265 @@
+<div class="container-fluid d-flex justify-content-around">
+  <div class="col-12 d-flex justify-content-center">
+    <!-- card com perfil e dinde -->
+    <div class="col-3 my-3 p-0 mx-0">
+      <div class="row">
+        <div class="card py-2 px-3 border-dark bratius fundorosa" style="width: 18rem">
+          <img src="{{ foto }}" class="card-img-top imgbratius" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">{{ nome }}</h5>
+            <p class="card-text">{{ area }}</p>
+
+            <h5 class="card-title text-center bordas">Minhe dinde</h5>
+
+            <div class="row d-flex align-items-center">
+              <div class="col-md-6">
+                <img
+                  src="https://midias.correiobraziliense.com.br/_midias/jpg/2021/03/05/675x450/1_cbpfot020320212188-6556336.jpg"
+                  alt=""
+                  class="img-fluid rounded-circle fotodinde"
+                />
+              </div>
+
+              <div class="col-md-6">
+                <p class="font">Nome da silva sauro pereira souza</p>
+              </div>
+            </div>
+
+            <p class="m-2">Descrição/Cargo.</p>
+          </div>
+        </div>
+      </div>
+      <!-- /card com perfil e dinde -->
+
+      <!-- card com temas -->
+
+      <div class="row">
+        <div
+          class="card py-2 px-3 border-dark bratius mt-3 fundorosa"
+          style="width: 18rem"
+        >
+          <div class="card-body">
+            <div class="row">
+              <h5 class="text-center">Temas</h5>
+              <div *ngFor="let item of listaTemas">
+                <div class="row bordas2">
+                <div class="col-6">
+                  <h6 >{{ item.nomeTema }}</h6>
+                </div>
+                <div class="col-6 d-flex justify-content-start">
+                  <a [routerLink]="['/tema-edit', item.id]" class="text-decoration-none text-dark pe-2 border-end border-dark"> Editar </a>
+                  <a [routerLink]="['/tema-delet', item.id]" class="text-decoration-none text-dark ps-2" > Apagar </a>
+                </div>
+              </div>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+              <button
+                type="button"
+                class="btn btn-success m-2"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Novo tema
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- /card com temas  -->
+    </div>
+
+    <div class="col-8 my-3 pe-3 mx-0">
+      <!-- lugar onde posta  -->
+      <div class="row d-flex justify-content-start">
+        <div class="card postagem">
+          <div class="card-body">
+            <div class="mb-3">
+              <textarea 
+              [(ngModel)]="postagem.texto"
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="3"
+                placeholder="Escreva sua postagem"
+              ></textarea>
+            </div>
+
+            <div class="row">
+              <div class="col d-flex justify-content-start align-items-center">
+                <button
+                  type="button"
+                  class="btn btn-outline-success green text-dark me-4"
+                  data-bs-toggle="modal"
+                  data-bs-target="#ModalPostagem"
+                >
+                  Inserir mídia
+                </button>
+                <div class="form-check form-check-inline">
+                  <input  (input)="tipoPostagem($event)" class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="postagem">
+                  <label class="form-check-label" for="inlineRadio1">Postagem</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input (input)="tipoPostagem($event)" class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="vaga">
+                  <label class="form-check-label" for="inlineRadio2">Vaga</label>
+                </div>
+              </div>
+              <div class="col d-flex justify-content-end">
+                 <select name="tema" id="tema" [(ngModel)]='idTema' (change)="findByIdTema()" class="form-select me-4" aria-label="Default select example">
+                  <option *ngFor ='let temas of listaTemas' value="{{temas.id}}" >{{temas.nomeTema}}</option>
+                </select>  
+                <button type="button" class="btn btn-success" (click)='cadastrarPostagem()'>Postar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- /lugar onde posta -->
+
+      <!-- postagens -->
+      <div *ngFor="let post of listaPostagem">
+      <div class="row">
+        <div class="card w-100 p-3 mt-2">
+          <a href="#" class="card-link p-3 text-decoration-none green">
+            <h5>{{post.usuario.nome}}</h5>
+          </a>
+
+          <p>{{post.data | date: 'dd/MM/yyyy'}} às {{post.data | date: 'HH:mm'}}</p>
+
+          <h6 class="ps-3 mb-3"> {{post.tema.nomeTema}} </h6>
+          <div class="card-body">
+            <!-- <h5 class="card-title">Isso é uma postagem</h5> -->
+            <p class="card-text">
+              {{post.texto}}
+            </p>
+          </div>
+          <img
+          src="{{post.midia}}"
+          class="card-img-bottom"
+          alt="..."
+        />
+        <a [routerLink]="['/postagem-edit', post.id]"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+        <a [routerLink]="['/postagem-delet', post.id]"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+        <a href=""><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+      
+
+      <!-- postagem -->
+    </div>
+  </div>
+</div>
+
+<!-- Modal de tema-->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Novo Tema</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group mt-2">
+          <label for="nome" class="form-label font"> Nome: </label>
+          <input
+            [(ngModel)]="tema.nomeTema"
+            type="text"
+            class="form-control"
+            id="nome"
+            placeholder="Digite o nome do tema"
+          />
+        </div>
+        <div class="form-group mt-2">
+          <label for="área" class="form-label font"> Área: </label>
+          <input
+            [(ngModel)]="tema.area"
+            type="text"
+            class="form-control"
+            id="area"
+            placeholder="Digite a área do tema"
+          />
+        </div>
+        <div class="form-group mt-2">
+          <label for="descricaoTema" class="form-label font">
+            Descrição:
+          </label>
+          <input
+            [(ngModel)]="tema.descricao"
+            type="text"
+            class="form-control"
+            id="descricaoTema"
+            placeholder="Digite a descricao do tema"
+          />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Cancelar
+        </button>
+        <button
+          type="button"
+          class="btn btn-success"
+          (click)="cadastrarTema()"
+          data-bs-dismiss="modal"
+        >
+          Salvar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- /modal de tema -->
+
+<!-- Modal  de postagem-->
+<div
+  class="modal fade"
+  id="ModalPostagem"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"> Insira o link da sua mídia </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <input
+        (input)='midia($event)'
+        type="text"
+        class="form-control"
+        id="midia"
+        placeholder="Digite o link da mídia"
+      />
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Cancelar
+        </button>
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- /modal de postagem -->

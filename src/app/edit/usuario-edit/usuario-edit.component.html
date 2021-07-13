@@ -1,0 +1,52 @@
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center"> Atualizar Perfil</h1>
+        </div>
+    </div>
+    <div class="row d-7 justify-content-center">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="nome"> Nome </label>
+                <input type="text" class="form-control" name="nome" id="nome" [(ngModel)]='user.nome'>
+            </div>
+            <div class="form-group">
+                <label for="usuario"> Nome de usuário </label>
+                <input type="text" class="form-control" name="usuario" id="nomeTema" [(ngModel)]='user.usuario'>
+            </div>
+            <div class="form-group">
+                <label for="Email"> Email </label>
+                <input type="text" class="form-control" name="email" id="email"  [(ngModel)]='user.email'>
+            </div>
+            <div class="form-group">
+                <label for="telefone"> Telefone </label>
+                <input type="text" class="form-control" name="telefone" id="descricao" [(ngModel)]='user.telefone'>
+            </div>
+            <div class="form-group">
+                <label for="foto"> Link da Foto </label>
+                <input type="text" class="form-control" name="foto" id="foto" [(ngModel)]='user.foto'>
+            </div>
+            <div class="form-group">
+                <label for="dataNasc"> Data de nascimento </label>
+                <input type="date" class="form-control" name="dataNasc" id="dataNasc" [(ngModel)]='user.dataNascimento'>
+            </div>
+            <div class="form-group">
+                <label for="area"> Área </label>
+                <input type="text" class="form-control" name="area" id="area" [(ngModel)]='user.area'>
+            </div>
+            <div class="form-group">
+                <label for="senha"> Para continuar, digite sua senha: </label>
+                <input type="password" class="form-control" name="senha" id="senha" (input)='confirmSenha($event)'>
+            </div>
+            <div class="form-group">
+                <label for="senha"> Confirmar senha </label>
+                <input type="password" class="form-control" name="confirmSenha" id="confirmSenha" [(ngModel)]='user.senha'>
+            </div>
+            <div class="d-flex justify-content-center mt-3">
+                <button class="btn btn-danger me-4" routerLink='/home'>Cancelar</button>
+                <button class="btn btn-success" (click)='alterarUser()' type="submit"> Atualizar </button>
+            </div>
+        </div>
+    </div>
+</div>
+

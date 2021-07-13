@@ -1,0 +1,39 @@
+<div class="container-fluid d-flex justify-content-center pt-2">
+  <div class="col-11 d-flex flex-column justify-content-center">
+    <div class="row mb-3">
+      <div class="card bratius border-dark" style="width: 100%">
+        <img src="../../assets/capa2.gif" class="card-img-top bratius mt-2 capa" alt="..." />
+        <div class="card-body">
+          <div class="row g-0 d-flex align-items-center">
+            <div class="col-md-4">
+              <img src="{{ foto }}" class="img-fluid imgbratius mb-2" alt="..." />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h3 class="card-title text-center">{{ nome }}</h3>
+                <p class="card-text">Área: {{ area }}</p>
+                <p class="card-text">Nome de usuário: {{ usuario }}</p>
+                <!-- <p class="card-text">
+                  Data de Nascimento: {{ user.dataNascimento }}
+                </p> -->
+                <p class="card-text">Telefone: {{ telefone }}</p>
+                <p class="card-text">Email: {{ email }}</p>
+                <a  class="btn btn-success mt-2"  [routerLink]="['/usuario-edit', id]" >
+                  Editar perfil
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card mb-3 py-2 px-3 border-dark bratius" style="width: 100%">
+        <div class="card-body">
+          <h4>Sobre</h4>
+          <p class="card-text">{{ sobre }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

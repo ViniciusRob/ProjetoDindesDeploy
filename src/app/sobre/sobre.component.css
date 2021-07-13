@@ -1,0 +1,38 @@
+.font{
+    font-family: Trykker;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    color: #FFFFFF;
+  }
+
+  .bg1 {
+    background: rgb(235, 176, 190);
+    background: linear-gradient(
+      90deg,
+      rgba(235, 176, 190, 1) 0%,
+      rgba(246, 117, 117, 1) 72%
+    );
+  }
+
+  .bratius{
+    border-radius: 34px;
+}
+
+.imgbratius{
+    border-radius: 62px;
+    width: 300px;
+    height: 300px;
+}
+
+.imgbratius2{
+    border-radius: 62px;
+    width: 200px;
+    height: 200px;
+}
+
+
+
+.green{
+    color: #23866B;
+}

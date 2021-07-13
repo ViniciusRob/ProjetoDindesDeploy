@@ -1,0 +1,27 @@
+
+<div class="container">
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0  align-items-center">
+          <div class="col-md-4">
+            <img src="../../assets/dindesmaior.gif" class="img-fluid rounded-start logo" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+                <form>
+                    <div class="mb-3">
+                      <label for="usuario" class="form-label font">Usuário</label>
+                      <input [(ngModel)]= 'userLogin.usuario' type="text" class="form-control" id="usuario" aria-describedby="usuarioHelp" placeholder="Digite seu usuário" name="usuario">
+                    </div>
+                    <div class="mb-3">
+                      <label for="senha" class="form-label font">Senha </label>
+                      <input [(ngModel)]='userLogin.senha' type="password" class="form-control" name="senha" id="senha" placeholder="Digite sua senha">
+                    </div>
+                    <button type="submit" class="btn btn-outline-light" (click)='entrar()'>Entrar</button>
+                  </form>
+                  <hr>
+                  <p class="font2 mb-0"> Não possui uma conta? <a routerLink='/option' class="font2 hover text-decoration-none"> Cadastre-se </a> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>

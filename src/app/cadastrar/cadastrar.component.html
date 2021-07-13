@@ -1,0 +1,70 @@
+<div class="container-fluid bggreen">
+    <div class="row align-items-center">
+
+        <!-- imagem da direita -->
+
+        <div class="col-md-6 d-flex justify-content-center align-items-center" id="img-bg"> <img src="../../assets/fundoCadastro.png" alt="" class="fundo"></div>
+
+        <!-- /imagem da direita -->
+
+        <!-- formulário de cadastro -->
+        <div class="col-md-6 mt-3 mb-3 bggreen">
+            <div class="row d-flex justify-content-center mb-3 bggreen">
+                <div class="col-md-10">
+                    <h1 class="text-center font">Cadastre-se</h1>
+                    <div class="form-group">
+                        <label for="nome" class="font2 mt-3 mb-1">Nome</label>
+                        <input [(ngModel)]='user.nome' class="form-control" type="text" name="nome" id="nome" placeholder="Insira seu Nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="usuario" class="font2 mt-1 mb-1">Usuario</label>
+                        <input [(ngModel)]='user.usuario' class="form-control" type="text" name="usuario" id="usuario" placeholder="Insira seu Usuário">
+                    </div>
+                    <div class="form-group">
+                        <label for="dataNasc" class="font2 mt-1 mb-1">Data de Nascimento</label>
+                        <input [(ngModel)]='user.dataNascimento' class="form-control text-secondary" type="date" name="dataNascimento" id="dataNascimento">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="font2 mt-1 mb-1">Email</label>
+                        <input [(ngModel)]='user.email' class="form-control" type="email" name="email" id="email" placeholder="exemplo@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="senha" class="font2 mt-1 mb-1">Senha</label>
+                        <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha" id="senha" placeholder="Insira sua Senha">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmSenha" class="font2 mt-1 mb-1">Confirme sua Senha</label>
+                        <input [(ngModel)]='user.senha' class="form-control" type="password" name="confirmSenha" id="confirmSenha"
+                            placeholder="Confirme sua Senha">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone" class="font2 mt-1 mb-1">Telefone</label>
+                        <input [(ngModel)]='user.telefone' class="form-control" type="text" name="Telefone" id="Telefone"
+                            placeholder="(xx) 0000-0000">
+                    </div>
+                <div class="form-group">
+                        <label for="telefone" class="font2 mt-1 mb-1">Area</label>
+                        <input [(ngModel)]='user.area' class="form-control" type="text" name="area" id="area"
+                            placeholder="Insira sua área de trabalho">
+                    </div>
+                    <div class="form-group">
+                        <label for="foto" class="font2 mt-1 mb-1">Link da Foto</label>
+                        <input [(ngModel)]='user.foto' class="form-control" type="text" name="foto" id="foto" placeholder="Link da Sua Foto">
+                    </div>
+                    <!-- <div class="form-group">
+                        <label for="foto" class="font2 mt-1 mb-1">Tipo</label>
+                        <input [(ngModel)]='user.tipo' class="form-control" type="text" name="tipo" id="tipo" placeholder="">
+                    </div> -->
+                    
+                    <div class="d-flex justify-content-start m-3">
+                        <a routerLink='/entrar'>
+                        <button type="submit" class="btn btn-danger me-4" routerLink='/entrar'> Cancelar</button></a>
+                        <button type="submit" class="btn btn-success" (click)="cadastrar()">Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+     <!-- /formulário de cadastro -->
+
+    </div>
+</div>

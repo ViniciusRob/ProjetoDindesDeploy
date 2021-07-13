@@ -1,0 +1,56 @@
+.bg1 {
+    background: rgb(235, 176, 190);
+    background: linear-gradient(
+      90deg,
+      rgba(235, 176, 190, 1) 0%,
+      rgba(246, 117, 117, 1) 72%
+    );
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100vw;
+    min-height: 100vh;
+   
+    background: linear-gradient(180deg, #EBB0BE 0%, #F67575 100%);
+  }
+
+  .card{
+    background-color: #23866B;
+    align-items: center;
+    border-radius: 10%;
+    min-width: 25%;
+    padding: 20px 30px;
+    box-shadow: 3px 3px 2px 1px #00000060;
+  }
+
+  .logo{
+      width: 100%;
+      /* height: 100%; */
+  }
+
+  .font{
+    font-family: Trykker;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    color: #FFFFFF;
+  }
+
+  .font2{
+    font-family: Trykker;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #FFFFFF;
+  }
+
+  hr{
+    color: white;
+  }
+
+  .hover:hover{
+      color: #EBB0BE;
+  }

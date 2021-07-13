@@ -1,0 +1,47 @@
+.bratius {
+  border-radius: 34px;
+}
+
+.imgbratius {
+  border-radius: 62px;
+}
+
+.green {
+  color: #23866b;
+}
+
+.fotodinde {
+  width: 100px;
+  height: 100px;
+}
+
+.font {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: #000000;
+}
+
+.postagem {
+  background-color: rgba(250, 9, 129, 0.15);
+  backdrop-filter: blur(5px);
+  padding: 0;
+  width: 100%;
+}
+
+.fundorosa {
+  background-color: rgba(250, 9, 129, 0.15);
+  backdrop-filter: blur(5px);
+}
+
+.bordas {
+  padding: 5px 0;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.bordas2 {
+  padding: 5px 0;
+  border-top: 1px solid black;
+}
+
