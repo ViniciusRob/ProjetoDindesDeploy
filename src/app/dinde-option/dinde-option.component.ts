@@ -59,7 +59,7 @@ export class DindeOptionComponent implements OnInit {
 
   dindeId(event: any){
     this.idDinde = event.target.value
-    this.findByIdDinde(this.idDinde)
+    // this.findByIdDinde(this.idDinde)
   }
 
   confirmSenha(event: any) {
