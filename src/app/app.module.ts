@@ -25,6 +25,8 @@ import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component
 import { AlertasComponent } from './alertas/alertas.component';
 import { TemasComponent } from './temas/temas.component';
 import { VagasComponent } from './vagas/vagas.component';
+import { DindeComponent } from './dinde/dinde.component';
+import { DindeOptionComponent } from './dinde-option/dinde-option.component';
 
 
 @NgModule({
@@ -45,7 +47,9 @@ import { VagasComponent } from './vagas/vagas.component';
     UsuarioEditComponent,
     AlertasComponent,
     TemasComponent,
-    VagasComponent
+    VagasComponent,
+    DindeComponent,
+    DindeOptionComponent
   ],
   imports: [
     BrowserModule,
