@@ -9,6 +9,7 @@
             <h5 class="card-title">{{ nome }}</h5>
             <p class="card-text">{{ area }}</p>
 
+            <div *ngIf="user.dinde != null">
             <h5 class="card-title text-center bordas">Minhe dinde</h5>
 
             <div class="row d-flex align-items-center">
@@ -24,6 +25,7 @@
             </div>
 
             <p class="m-2">{{user.dinde.area}}</p>
+          </div>
           </div>
         </div>
       </div>
