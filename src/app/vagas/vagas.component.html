@@ -24,14 +24,16 @@
                   {{ post.texto }}
                 </p>
               </div>
-              <img src="{{ post.midia }}" class="card-img-bottom" alt="..." />
-              <a [routerLink]="['/postagem-edit', post.id]"
-                ><i class="fa fa-pencil-square-o" aria-hidden="true"></i
-              ></a>
-              <a [routerLink]="['/postagem-delet', post.id]"
-                ><i class="fa fa-trash-o" aria-hidden="true"></i
-              ></a>
-              <a href=""><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+              <img src="{{post.midia}}" class="card-img-bottom" alt="..." />
+
+              <!-- Botõs de editar apagar e curtir -->
+              <div class="d-flex mt-2">
+                <a [routerLink]="['/postagem-edit', post.id]" class="me-3"><i class="fa fa-pencil-square-o"
+                    aria-hidden="true"></i></a>
+                <a [routerLink]="['/postagem-delet', post.id]" class="me-3"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+              </div>
+              <!-- /Botõs de editar apagar e curtir -->
             </div>
           </div>
         </div>
