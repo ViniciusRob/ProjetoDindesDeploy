@@ -1,3 +1,106 @@
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+
+.boxes {
+  text-align: center;
+  position: relative;
+  /* width: 1260px; */
+  margin: 0 auto;
+}
+
+.box {
+  display: block;
+  float: left;
+  position: relative;
+  /* width: 400px;
+  height: 350px; */
+  text-align: center;
+  border-collapse: collapse;
+  text-decoration: none;
+  color: #fff;
+  margin: 0 10px;
+}
+
+h3 {
+  transition: all 0.5s;
+  padding-top: 80px;
+  padding-bottom: 30px;
+  margin: 0;
+  /* font-size: 2em; */
+  text-transform: uppercase;
+  font-family: Trykker;
+    font-style: normal;
+    font-weight: normal;
+}
+
+img {
+  transition: all 0.4s;
+  font-size: 4em;
+}
+
+p {
+  transition: all 0.5s;
+  margin-top: 30px;
+  font-family: Trykker;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.box:before {
+  transition: all 0.4s;
+  position: absolute;
+  content: "";
+  /* width: 100%; */
+  height: 50%;
+  left: 50%;
+  margin-left: -50%;
+  top: 25%;
+  /* border-color: rgba(178, 189, 27, 0);
+  border-style: solid;
+  border-width: 1px 1px; */
+}
+
+.box:after {
+  transition: all 0.4s;
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 100%;
+  left: 50%;
+  margin-left: -25%;
+  top: 0;
+  /* border-color: rgba(200, 200, 200, 0);
+  border-style: solid;
+  border-width: 1px 1px; */
+}
+
+.box:hover {
+  color: #EBB0BE;
+}
+
+  .box:hover h3{
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+
+  .box:hover p{
+    margin-top: 70px;
+  }
+
+  .box:hover:after{
+    /* width: 402px; */
+    margin-left: -50%;
+    /* border-color: #EBB0BE; */
+  }
+
+  .box:hover:before{
+    height: 352px;
+    top: 0%;
+    /* border-color: #EBB0BE; */
+  }
+
+
 .bg1 {
     background: rgb(235, 176, 190);
     background: linear-gradient(
@@ -51,10 +154,10 @@
     color: white;
   }
 
-  .hover:hover{
+  /* .hover:hover{
       color: #EBB0BE;
   }
 
   .imghover1:hover{
       border: 5px solid white;
-  }
+  } */

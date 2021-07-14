@@ -1,17 +1,40 @@
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+/>
+
 <div class="container">
-    <div class="card mb-3" style="max-width: 540px;">
-        <div class="row  d-flex justify-contents-center g-0  align-items-center">
-            <p class="font">Você quer ser:</p>
+  <div class="card mb-3" style="max-width: 540px">
+    <div class="row d-flex justify-contents-center g-0 align-items-center">
+      <p class="font">Você quer ser:</p>
+    </div>
+    <div class="row g-0 d-flex align-items-center justify-content-center">
+      <div class="boxes d-flex align-items-center">
+        <div class="col-md-6">
+          <a class="box" (click)="dinde()">
+            <h3>Dinde</h3>
+            <a (click)="dinde()"
+              ><img
+                src="../../assets/option1.png"
+                class="img-fluid rounded-start logo imghover1"
+                alt="..."
+            /></a>
+            <p>Quero apadrinhar alguém</p>
+          </a>
         </div>
-        <div class="row g-0  align-items-center">
-          <div class="col-md-6">
-            <a (click)='dinde()'><img src="../../assets/option1.png" class="img-fluid rounded-start logo imghover1" alt="..."></a>
-            <p class="font text-center">Dinde</p>
-          </div>
-          <div class="col-md-6" >
-            <a (click)='apadrinhade()' ><img src="../../assets/option2.png" class="img-fluid rounded-start logo imghover1" alt="..."></a>
-            <p class="font text-center">Apadrinhade</p>
-          </div>
+        <div class="col-md-6">
+          <a class="box" (click)="apadrinhade()">
+            <h3>Apadrinhade</h3>
+            <a (click)="apadrinhade()"
+              ><img
+                src="../../assets/option2.png"
+                class="img-fluid rounded-start logo imghover1"
+                alt="..."
+            /></a>
+            <p>Quero ser apadrinhada.</p>
+          </a>
         </div>
       </div>
+    </div>
   </div>
+</div>
