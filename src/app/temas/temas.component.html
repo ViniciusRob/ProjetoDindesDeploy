@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12 d-flex justify-content-center mt-5">
-      <h3>Pesquise postagens por tema</h3>
+      <h1 class="text-color">Pesquise postagens pelo tema!</h1>
     </div>
   </div>
   <div class="row d-flex justify-content-center mt-5 mb-5">
@@ -21,7 +21,7 @@
   <div class="row">
     <div *ngFor="let tema of listaTemas">
   
-      <h4>{{ tema.nomeTema }}</h4>
+      <h4 class="text-color mt-5">{{ tema.nomeTema }}</h4>
       <div *ngFor="let post of tema.postagem">
         <div class="row">
           <div class="card w-100 p-3 mt-2">
