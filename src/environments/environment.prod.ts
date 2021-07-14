@@ -10,5 +10,5 @@ export const environment = {
   tipo: '',
   usuario: '',
   sobre: '',
-  //dinde: ''
+  dinde: ''
 };

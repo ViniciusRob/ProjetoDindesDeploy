@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit {
   foto = environment.foto
   nome = environment.nome
   area = environment.area
-  //dinde = environment.dinde
+ 
 
   constructor(
     private router: Router,
@@ -56,6 +56,7 @@ export class HomeComponent implements OnInit {
 
     this.findAllTemas()
     this.findAllPostagem()
+    this.findByIdUser()
   }
 
   // metodos de tema
