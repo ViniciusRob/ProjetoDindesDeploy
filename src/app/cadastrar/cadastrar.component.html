@@ -14,7 +14,7 @@
                     <h1 class="text-center font">Cadastre-se</h1>
                     <div class="form-group">
                         <label for="nome" class="font2 mt-3 mb-1">Nome</label>
-                        <input [(ngModel)]='user.nome' class="form-control" type="text" name="nome" id="nome" placeholder="Insira seu Nome">
+                        <input [(ngModel)]='user.nome' class="form-control" type="text" name="nome" id="nome1" placeholder="Insira seu Nome">
                     </div>
                     <div class="form-group">
                         <label for="usuario" class="font2 mt-1 mb-1">Usuario</label>
@@ -42,19 +42,29 @@
                         <input [(ngModel)]='user.telefone' class="form-control" type="text" name="Telefone" id="Telefone"
                             placeholder="(xx) 0000-0000">
                     </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                         <label for="area" class="font2 mt-1 mb-1">Area</label>
                         <input [(ngModel)]='user.area' class="form-control" type="text" name="area" id="area"
                             placeholder="Insira sua área de trabalho">
-                    </div>
+                    </div> -->
+                    <label for="area" class="font2 mt-1 mb-1">Área</label>
+                    <select (change)='area($event)' class="form-select" aria-label="Default select example">
+                        <option selected>Escolha sua área </option>
+                        <option value="Tecnologia">Tecnologia</option>
+                        <option value="Educação">Educação</option>
+                        <option value="Recursos Humanos">Recursos Humanos</option>
+                        <option value="Cultura e Artes">Cultura e Artes</option>
+                        <option value="Saúde">Saúde</option>
+                        <option value="Comércio">Comércio</option>
+                        <option value="Mercado financeiro">Mercado financeiro</option>
+                        <option value="imobiliária">Imobiliaria</option>
+                        <option value="Direito">Direito e advocacia</option>
+                      </select>
                     <div class="form-group">
                         <label for="foto" class="font2 mt-1 mb-1">Link da Foto</label>
                         <input [(ngModel)]='user.foto' class="form-control" type="text" name="foto" id="foto" placeholder="Link da Sua Foto">
                     </div>
-                    <!-- <div class="form-group">
-                        <label for="foto" class="font2 mt-1 mb-1">Tipo</label>
-                        <input [(ngModel)]='user.tipo' class="form-control" type="text" name="tipo" id="tipo" placeholder="">
-                    </div> -->
+
                     
                     <div class="d-flex justify-content-start m-3">
                         <a routerLink='/entrar'>
