@@ -4,7 +4,11 @@
     <div class="col-3 my-3 p-0 mx-0">
       <div class="row">
         <div class="card py-2 px-3 border-dark bratius fundorosa" style="width: 18rem">
-          <img src="{{ foto }}" class="card-img-top imgbratius" alt="..." />
+
+          <img  src="{{ foto }}" class="card-img-top imgbratius" alt="..." onerror="this.src='../../assets/kisspng-silhouette-woman-clip-art-nothing-grows-here-5b1a5f89a2ada1.2641022015284550496663.png'" /> 
+
+          <!-- <img *ngIf="!fotoTeste(postagem.usuario)" src="../../assets/kisspng-silhouette-woman-clip-art-nothing-grows-here-5b1a5f89a2ada1.2641022015284550496663.png" class="card-img-top imgbratius" alt="..."  />  -->
+
           <div class="card-body">
             <h5 class="card-title">{{ nome }}</h5>
             <p class="card-text">{{ area }}</p>
