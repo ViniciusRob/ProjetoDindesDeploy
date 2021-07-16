@@ -61,18 +61,18 @@ export class CadastrarComponent implements OnInit {
 
   // funções de validação
 
-  // validaNome(){
+  validaNome(){
 
-  //   let nome = document.querySelector("#nome1");
+    let nome = document.querySelector("#nome1");
 
-  //   let nomeValue = (<HTMLInputElement>document.querySelector("#nome1")).value.length;
+    let nomeValue = (<HTMLInputElement>document.querySelector("#nome1")).value.length;
     
-  //   if(nomeValue < 5){
-  //     nome.setAttribute('style', 'border-color: #9794F2');
-  //   } else {
-  //     nome.setAttribute('style', 'border-color:#e84c3d');
-  //   }
-  // }
+    if(nomeValue < 5){
+      nome.setAttribute('style', 'border-color: #9794F2');
+    } else {
+      nome.setAttribute('style', 'border-color:#e84c3d');
+    }
+  }
 
 
 }

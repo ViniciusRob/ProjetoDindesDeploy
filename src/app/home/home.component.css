@@ -61,6 +61,17 @@
   color: red;
 }
 
+
+@media screen and (max-width: 1050px) {
+  .disable-mobile {
+      display: none;
+  }
+
+  .enable-mobile {
+      display: inline-block;
+  }
+}
+
 /* onerror{
   border-radius: 62px;
   width: 30px;

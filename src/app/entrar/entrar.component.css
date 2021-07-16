@@ -66,3 +66,13 @@
   .imagem2{
     height: 40%;
   }
+
+  @media screen and (max-width: 800px) {
+    .disable-mobile {
+        display: none;
+    }
+
+    .enable-mobile {
+        display: inline-block;
+    }
+  }
