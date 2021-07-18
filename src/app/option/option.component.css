@@ -32,6 +32,7 @@ h3 {
   font-family: Trykker;
     font-style: normal;
     font-weight: normal;
+    color: #fff;
 }
 
 img {
@@ -45,6 +46,7 @@ p {
   font-family: Trykker;
     font-style: normal;
     font-weight: normal;
+    color: #fff;
 }
 
 .box:before {
@@ -56,8 +58,8 @@ p {
   left: 50%;
   margin-left: -50%;
   top: 25%;
-  /* border-color: rgba(178, 189, 27, 0);
-  border-style: solid;
+  border-color: rgba(178, 189, 27, 0);
+  /* border-style: solid;
   border-width: 1px 1px; */
 }
 
@@ -70,8 +72,8 @@ p {
   left: 50%;
   margin-left: -25%;
   top: 0;
-  /* border-color: rgba(200, 200, 200, 0);
-  border-style: solid;
+  border-color: rgba(200, 200, 200, 0);
+  /* border-style: solid;
   border-width: 1px 1px; */
 }
 
@@ -82,22 +84,24 @@ p {
   .box:hover h3{
     padding-top: 50px;
     padding-bottom: 60px;
+    color: #EBB0BE;
   }
 
   .box:hover p{
     margin-top: 70px;
+    color: #EBB0BE;
   }
 
   .box:hover:after{
-    /* width: 402px; */
+    width: 402px;
     margin-left: -50%;
-    /* border-color: #EBB0BE; */
+    border-color: #EBB0BE;
   }
 
   .box:hover:before{
     height: 352px;
     top: 0%;
-    /* border-color: #EBB0BE; */
+    border-color: #EBB0BE;
   }
 
 
