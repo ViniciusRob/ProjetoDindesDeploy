@@ -86,6 +86,11 @@ export class DindeOptionComponent implements OnInit {
         environment.nome = '';
         console.log(this.dinde)
         this.router.navigate(['/entrar']);
+      }, erro => {
+        if(erro.status == 500){
+          this.alertas.showAlertDanger('Verifique se escolheu seu dinde e se preencheu sua senha e tente novamente.')
+        }
+  
       });
     }
   }

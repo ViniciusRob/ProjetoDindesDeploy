@@ -58,6 +58,11 @@ export class TemaEditComponent implements OnInit {
       this.tema = resp
       this.alertas.showAlertSuccess('Tema atualizado com sucesso')
       this.router.navigate(['/home'])
+    }, erro => {
+      if(erro.status == 500){
+        this.alertas.showAlertDanger('Verifique se preencheu todos os campos corretamente.')
+      }
+
     })
   }
 

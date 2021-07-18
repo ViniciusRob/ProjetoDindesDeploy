@@ -73,6 +73,11 @@ export class HomeComponent implements OnInit {
       this.alertaService.showAlertSuccess('Tema cadastrado com sucesso')
       this.findAllTemas()
       this.tema = new Tema()
+    }, erro => {
+      if(erro.status == 500){
+        this.alertaService.showAlertDanger('Verifique se preencheu todos os campos corretamente.')
+      }
+
     })
   }
 
@@ -121,6 +126,11 @@ export class HomeComponent implements OnInit {
       this.alertaService.showAlertDanger('Postagem feita com sucesso!')
       this.findAllPostagem()
       this.postagem = new Postagem()
+    }, erro => {
+      if(erro.status == 500){
+        this.alertaService.showAlertDanger('Verifique se indicou o tema da postagem e se ela é uma vaga ou não e tente novamente.')
+      }
+
     })
   }
 }

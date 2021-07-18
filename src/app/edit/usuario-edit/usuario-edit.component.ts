@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Postagem } from 'src/app/model/Postagem';
 import { User } from 'src/app/model/User';
+import { AlertaServiceService } from 'src/app/service/alerta-service.service';
 import { AuthService } from 'src/app/service/auth.service';
 import { PostagemService } from 'src/app/service/postagem.service';
 import { environment } from 'src/environments/environment.prod';
@@ -26,7 +27,8 @@ export class UsuarioEditComponent implements OnInit {
     private authService: AuthService,
     private router: Router,
     private route: ActivatedRoute,
-    private postagemService: PostagemService
+    private postagemService: PostagemService,
+    private alertas: AlertaServiceService
   ) { }
 
   ngOnInit(){
@@ -65,17 +67,22 @@ export class UsuarioEditComponent implements OnInit {
     this.user.postagem = this.listaPostagem
 
     if (this.user.senha != this.confirmarSenha) {
-      alert('As senhas não coincidem');
+      this.alertas.showAlertDanger('As senhas não coincidem');
     } else {
       this.authService.putUsuario(this.user).subscribe((resp: User) => {
         this.user = resp;
-        alert('Usuário atualizado com sucesso. Faça o login novamente');
+        this.alertas.showAlertSuccess('Usuário atualizado com sucesso. Faça o login novamente');
         environment.token = '';
         environment.foto = '';
         environment.id = 0;
         environment.nome = '';
         console.log(this.user)
         this.router.navigate(['/entrar']);
+      }, erro => {
+        if(erro.status == 500){
+          this.alertas.showAlertDanger('Verifique se preencheu todos os campos corretamente.')
+        }
+  
       });
     }
   }

@@ -41,6 +41,11 @@ export class PostagemDeleteComponent implements OnInit {
     this.postagemService.deletePostagem(this.idPostagem).subscribe(()=> {
       this.alerta.showAlertDanger('Postagem apagada com sucesso')
       this.router.navigate(['/home'])
+    },  erro => {
+      if(erro.status == 500){
+        this.alerta.showAlertDanger('Algo deu errado, tente novamente.')
+      }
+
     })
   }
 
