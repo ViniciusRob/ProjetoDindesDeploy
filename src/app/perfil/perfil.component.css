@@ -2,6 +2,22 @@
   border-radius: 34px;
 }
 
+.fa{
+  color: #000000;
+}
+
+.fa-pencil-square-o:hover{
+  color: green;
+}
+
+.fa-trash-o:hover{
+  color: #23866b;
+}
+
+.fa-heart-o:hover{
+  color: red;
+}
+
 .imgbratius {
   border-radius: 62px;
 }

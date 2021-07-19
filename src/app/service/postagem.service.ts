@@ -49,5 +49,8 @@ export class PostagemService {
     return this.http.delete(`https://dindes.herokuapp.com/postagens/${id}`, this.token)
   }
 
-
+  //testes de curtida
+  curtirPostagemId(id: number): Observable<Postagem>{
+    return this.http.put<Postagem>(`https://dindes.herokuapp.com/postagens/curtir/${id}`, this.token)
+  }
 }

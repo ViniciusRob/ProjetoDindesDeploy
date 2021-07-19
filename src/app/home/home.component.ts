@@ -56,7 +56,7 @@ export class HomeComponent implements OnInit {
 
     this.findAllTemas()
     this.findAllPostagem()
-    this.findByIdUser()
+    // this.findByIdUser()
   }
 
   // metodos de tema
@@ -84,7 +84,6 @@ export class HomeComponent implements OnInit {
   findByIdTema(){
     this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) =>{
       this.tema = resp
-      console.log(this.tema)
     })
   }
 
@@ -94,11 +93,11 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  findByIdUser(){
-    this.authService.getByIdUser(this.idUser).subscribe((resp: User) =>{
-      this.user = resp
-    })
-  }
+  // findByIdUser(){
+  //   this.authService.getByIdUser(this.idUser).subscribe((resp: User) =>{
+  //     this.user = resp
+  //   })
+  // }
 
   tipoPostagem(event: any){
     if(event.target.value=="postagem"){
@@ -123,14 +122,15 @@ export class HomeComponent implements OnInit {
 
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) =>{
       this.postagem = resp
-      this.alertaService.showAlertDanger('Postagem feita com sucesso!')
+      this.alertaService.showAlertSuccess('Postagem feita com sucesso!')
       this.findAllPostagem()
       this.postagem = new Postagem()
+      console.log(this.postagem)
+      
     }, erro => {
       if(erro.status == 500){
         this.alertaService.showAlertDanger('Verifique se indicou o tema da postagem e se ela é uma vaga ou não e tente novamente.')
       }
-
     })
   }
 }

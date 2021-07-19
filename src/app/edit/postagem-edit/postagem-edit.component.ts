@@ -47,7 +47,6 @@ export class PostagemEditComponent implements OnInit {
       if(erro.status == 500){
         this.alertas.showAlertDanger('Verifique se preencheu todos os campos corretamente.')
       }
-
     })
   }
 
