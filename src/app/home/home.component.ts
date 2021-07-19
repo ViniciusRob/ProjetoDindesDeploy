@@ -24,7 +24,10 @@ export class HomeComponent implements OnInit {
   listaPostagem: Postagem[]
 
   user: User = new User()
+  usuario: User = new User()
   idUser = environment.id
+  idUsuario = environment.id
+
 
   key = 'data';
   reverse = true;
@@ -56,7 +59,7 @@ export class HomeComponent implements OnInit {
 
     this.findAllTemas()
     this.findAllPostagem()
-    this.findByIdUser()
+    // this.findByIdUser()
   }
 
   // metodos de tema
@@ -114,23 +117,23 @@ export class HomeComponent implements OnInit {
   }
 
   cadastrarPostagem(){
-   this.tema.id = this.idTema
-   this.postagem.tema = this.tema
-
-    this.user.id = this.idUser
-    this.postagem.usuario = this.user
-
-    this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) =>{
-      this.postagem = resp
-      this.alertaService.showAlertSuccess('Postagem feita com sucesso!')
-      this.findAllPostagem()
-      this.postagem = new Postagem()
-
-      
-    }, erro => {
-      if(erro.status == 500){
-        this.alertaService.showAlertDanger('Verifique se indicou o tema da postagem e se ela é uma vaga ou não e tente novamente.')
-      }
-    })
-  }
+    this.tema.id = this.idTema
+    this.postagem.tema = this.tema
+  
+      this.usuario.id = this.idUsuario
+      this.postagem.usuario = this.usuario
+  
+      this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) =>{
+        this.postagem = resp
+        this.alertaService.showAlertSuccess('Postagem feita com sucesso!')
+        this.findAllPostagem()
+        this.postagem = new Postagem()
+  
+  
+      }, erro => {
+        if(erro.status == 500){
+          this.alertaService.showAlertDanger('Verifique se indicou o tema da postagem e se ela é uma vaga ou não e tente novamente.')
+        }
+      })
+    }
 }

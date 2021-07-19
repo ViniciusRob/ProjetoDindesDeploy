@@ -1,3 +1,5 @@
+import { User } from "src/app/model/User";
+
 export const environment = {
   production: true,
   token: '',
@@ -9,6 +11,5 @@ export const environment = {
   telefone: '',
   tipo: '',
   usuario: '',
-  sobre: '',
-  dinde: ''
+  sobre: ''
 };
