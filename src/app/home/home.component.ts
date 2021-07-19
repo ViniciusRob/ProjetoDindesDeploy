@@ -56,7 +56,7 @@ export class HomeComponent implements OnInit {
 
     this.findAllTemas()
     this.findAllPostagem()
-    // this.findByIdUser()
+    this.findByIdUser()
   }
 
   // metodos de tema
@@ -93,11 +93,11 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  // findByIdUser(){
-  //   this.authService.getByIdUser(this.idUser).subscribe((resp: User) =>{
-  //     this.user = resp
-  //   })
-  // }
+  findByIdUser(){
+    this.authService.getByIdUser(this.idUser).subscribe((resp: User) =>{
+      this.user = resp
+    })
+  }
 
   tipoPostagem(event: any){
     if(event.target.value=="postagem"){
@@ -125,7 +125,7 @@ export class HomeComponent implements OnInit {
       this.alertaService.showAlertSuccess('Postagem feita com sucesso!')
       this.findAllPostagem()
       this.postagem = new Postagem()
-      console.log(this.postagem)
+
       
     }, erro => {
       if(erro.status == 500){
