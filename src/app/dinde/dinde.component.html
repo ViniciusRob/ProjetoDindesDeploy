@@ -1,1 +1,81 @@
-<p>dinde works!</p>
+<div class="container-fluid d-flex justify-content-center pt-2">
+  <div class="col-11 d-flex flex-column justify-content-center">
+    <div class="row mb-3">
+      <div class="card bratius border-dark" style="width: 100%">
+        <img
+          src="../../assets/capa2.gif"
+          class="card-img-top bratius mt-2 capa"
+          alt="..."
+        />
+        <div class="card-body">
+          <div class="row g-0 d-flex align-items-center">
+            <div class="col-md-4">
+              <img
+                src="{{ user.dinde.foto }}"
+                class="img-fluid imgbratius mb-2"
+                alt="..."
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h3 class="card-title text-center">{{ user.dinde.nome }}</h3>
+                <p class="card-text">Área: {{ user.dinde.area }}</p>
+                <p class="card-text">Nome de usuário: {{ user.dinde.usuario }}</p>
+              
+                <h4 class="text-center my-2"> Entre em contato comigo por: </h4>
+                <p class="card-text">Telefone: {{ user.dinde.telefone }}</p>
+                <p class="card-text">Email: {{ user.dinde.email }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card mb-3 py-2 px-3 border-dark bratius" style="width: 100%">
+        <div class="card-body">
+          <h4>Sobre</h4>
+          <p class="card-text">{{ user.dinde.sobre }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12">
+        <div *ngFor="let post of listaPostagens | orderBy: key:reverse">
+          <div *ngIf='post.usuario.id == user.dinde.id'>
+          <div class="row">
+            <div class="card w-100 p-3 mt-2">
+              <h5 class="p-3 text-decoration-none green">
+                {{ post.usuario.nome }}
+              </h5>
+              <h6 class="ps-3 mb-3">{{ post.tema.nomeTema }}</h6>
+              <div class="card-body">
+                <p class="card-text">
+                  <small class="text-muted"
+                    >{{ post.data | date: "dd/MM/yyyy" }} às
+                    {{ post.data | date: "HH:mm" }}
+                  </small>
+                </p>
+                <!-- <h5 class="card-title">Isso é uma postagem</h5> -->
+                <p class="card-text">
+                  {{ post.texto }}
+                </p>
+              </div>
+              <img src="{{ post.midia }}" class="card-img-bottom" alt="..." />
+  
+              <!-- Botõs de editar apagar e curtir -->
+              <div class="d-flex mt-2">
+                <a [routerLink]="['/postagem-edit', post.id]" class="me-3"
+                  ><i class="fa fa-pencil-square-o" aria-hidden="true"></i
+                ></a>
+                <a [routerLink]="['/postagem-delet', post.id]" class="me-3"
+                  ><i class="fa fa-trash-o" aria-hidden="true"></i
+                ></a>
+                <a href=""><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+  </div>
+</div>

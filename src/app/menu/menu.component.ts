@@ -16,12 +16,16 @@ export class MenuComponent implements OnInit {
   foto = environment.foto
   nome = environment.nome
 
+  idUser = environment.id
+
   constructor(
     private router: Router,
     public auth: AuthService
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    this.findByIdUser()
+
   }
 
   sair(){
@@ -42,7 +46,11 @@ export class MenuComponent implements OnInit {
     
   }
 
-
+    findByIdUser(){
+    this.auth.getByIdUser(this.idUser).subscribe((resp: User) =>{
+      this.user = resp
+    })
+  }
     
   }
 
