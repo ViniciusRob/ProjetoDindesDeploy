@@ -6,6 +6,7 @@
           src="../../assets/capa2.gif"
           class="card-img-top bratius mt-2 capa"
           alt="..."
+          onerror="this.src='../../assets/kisspng-silhouette-woman-clip-art-nothing-grows-here-5b1a5f89a2ada1.2641022015284550496663.png'"
         />
         <div class="card-body">
           <div class="row g-0 d-flex align-items-center">
@@ -38,14 +39,14 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <!-- <div class="row">
       <div class="card mb-3 py-2 px-3 border-dark bratius" style="width: 100%">
         <div class="card-body">
           <h4>Sobre</h4>
           <p class="card-text">{{ sobre }}</p>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="row mb-3">
       <div class="col-md-12">
         <div *ngFor="let post of listaPostagens | orderBy: key:reverse">
@@ -68,7 +69,7 @@
                   {{ post.texto }}
                 </p>
               </div>
-              <img src="{{ post.midia }}" class="card-img-bottom" alt="..." />
+              <img src="{{ post.midia }}" class="card-img-bottom" alt="..."   onerror="this.src='../../assets/post.jpg'" />
   
               <!-- Botõs de editar apagar e curtir -->
               <div class="d-flex mt-2">

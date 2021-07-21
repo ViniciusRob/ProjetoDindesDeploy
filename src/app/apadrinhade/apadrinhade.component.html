@@ -41,7 +41,7 @@
             </div>
           </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
           <div
             class="card mb-3 py-2 px-3 border-dark bratius"
             style="width: 100%"
@@ -51,7 +51,7 @@
               <p class="card-text">{{ usuario.sobre }}</p>
             </div>
           </div>
-        </div>
+        </div> -->
         <div class="col-md-12">
           <div *ngFor="let post of listaPostagens | orderBy: key:reverse">
             <div *ngIf="post.usuario.id == usuario.id">
@@ -77,6 +77,7 @@
                     src="{{ post.midia }}"
                     class="card-img-bottom"
                     alt="..."
+                    onerror="this.src='../../assets/post.jpg'"
                   />
 
                   <!-- Botõs de editar apagar e curtir -->
