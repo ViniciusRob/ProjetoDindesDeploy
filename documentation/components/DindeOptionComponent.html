@@ -1,0 +1,1129 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>dindes documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">dindes documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>DindeOptionComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/dinde-option/dinde-option.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-dinde-option</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./dinde-option.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./dinde-option.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#confirmarSenha">confirmarSenha</a>
+                            </li>
+                            <li>
+                                <a href="#dinde">dinde</a>
+                            </li>
+                            <li>
+                                <a href="#id">id</a>
+                            </li>
+                            <li>
+                                <a href="#idDinde">idDinde</a>
+                            </li>
+                            <li>
+                                <a href="#listaUser">listaUser</a>
+                            </li>
+                            <li>
+                                <a href="#user">user</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#alterarUser">alterarUser</a>
+                            </li>
+                            <li>
+                                <a href="#confirmSenha">confirmSenha</a>
+                            </li>
+                            <li>
+                                <a href="#dindeId">dindeId</a>
+                            </li>
+                            <li>
+                                <a href="#findAllUser">findAllUser</a>
+                            </li>
+                            <li>
+                                <a href="#findByIdApadrinhade">findByIdApadrinhade</a>
+                            </li>
+                            <li>
+                                <a href="#findByIdDinde">findByIdDinde</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, auth: <a href="../injectables/AuthService.html">AuthService</a>, alertas: <a href="../injectables/AlertaServiceService.html">AlertaServiceService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/dinde-option/dinde-option.component.ts:22</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>auth</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>alertas</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AlertaServiceService.html" target="_self" >AlertaServiceService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="alterarUser"></a>
+                    <span class="name">
+                        <b>
+                            alterarUser
+                        </b>
+                        <a href="#alterarUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>alterarUser()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="69"
+                            class="link-to-prism">src/app/dinde-option/dinde-option.component.ts:69</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="confirmSenha"></a>
+                    <span class="name">
+                        <b>
+                            confirmSenha
+                        </b>
+                        <a href="#confirmSenha"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>confirmSenha(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="65"
+                            class="link-to-prism">src/app/dinde-option/dinde-option.component.ts:65</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dindeId"></a>
+                    <span class="name">
+                        <b>
+                            dindeId
+                        </b>
+                        <a href="#dindeId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>dindeId(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="60"
+                            class="link-to-prism">src/app/dinde-option/dinde-option.component.ts:60</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findAllUser"></a>
+                    <span class="name">
+                        <b>
+                            findAllUser
+                        </b>
+                        <a href="#findAllUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findAllUser()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="42"
+                            class="link-to-prism">src/app/dinde-option/dinde-option.component.ts:42</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findByIdApadrinhade"></a>
+                    <span class="name">
+                        <b>
+                            findByIdApadrinhade
+                        </b>
+                        <a href="#findByIdApadrinhade"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findByIdApadrinhade(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="48"
+                            class="link-to-prism">src/app/dinde-option/dinde-option.component.ts:48</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findByIdDinde"></a>
+                    <span class="name">
+                        <b>
+                            findByIdDinde
+                        </b>
+                        <a href="#findByIdDinde"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findByIdDinde(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="54"
+                            class="link-to-prism">src/app/dinde-option/dinde-option.component.ts:54</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="30"
+                            class="link-to-prism">src/app/dinde-option/dinde-option.component.ts:30</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="confirmarSenha"></a>
+                        <span class="name">
+                            <b>
+                            confirmarSenha</b>
+                            <a href="#confirmarSenha"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/dinde-option/dinde-option.component.ts:22</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dinde"></a>
+                        <span class="name">
+                            <b>
+                            dinde</b>
+                            <a href="#dinde"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/User.html" target="_self" >User</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new User()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/dinde-option/dinde-option.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="id"></a>
+                        <span class="name">
+                            <b>
+                            id</b>
+                            <a href="#id"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>environment.id</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/dinde-option/dinde-option.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="idDinde"></a>
+                        <span class="name">
+                            <b>
+                            idDinde</b>
+                            <a href="#idDinde"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/dinde-option/dinde-option.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="listaUser"></a>
+                        <span class="name">
+                            <b>
+                            listaUser</b>
+                            <a href="#listaUser"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/User.html" target="_self" >User[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/dinde-option/dinde-option.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="user"></a>
+                        <span class="name">
+                            <b>
+                            user</b>
+                            <a href="#user"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/User.html" target="_self" >User</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new User()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/dinde-option/dinde-option.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { environment } from &#x27;src/environments/environment.prod&#x27;;
+import { User } from &#x27;../model/User&#x27;;
+import { AlertaServiceService } from &#x27;../service/alerta-service.service&#x27;;
+import { AuthService } from &#x27;../service/auth.service&#x27;;
+
+@Component({
+  selector: &#x27;app-dinde-option&#x27;,
+  templateUrl: &#x27;./dinde-option.component.html&#x27;,
+  styleUrls: [&#x27;./dinde-option.component.css&#x27;]
+})
+export class DindeOptionComponent implements OnInit {
+
+  user: User &#x3D; new User()
+  dinde: User &#x3D; new User()
+  listaUser: User[]
+  idDinde: number
+
+  id &#x3D; environment.id
+
+  confirmarSenha: string;
+
+  constructor(
+    private router: Router,
+    private auth: AuthService,
+    private alertas: AlertaServiceService
+  ) { }
+
+  ngOnInit(){
+    window.scroll(0, 0);
+
+    if(environment.token &#x3D;&#x3D; &#x27;&#x27;){
+      this.router.navigate([&#x27;/entrar&#x27;])
+    }
+
+    this.id &#x3D; environment.id
+    this.findAllUser()
+    this.findByIdApadrinhade(this.id)
+  }
+
+  findAllUser(){
+    this.auth.getAllUser().subscribe((resp: User[]) &#x3D;&gt;{
+      this.listaUser &#x3D; resp
+    })
+  }
+
+  findByIdApadrinhade(id: number){
+    this.auth.getByIdUser(id).subscribe((resp: User) &#x3D;&gt; {
+      this.user &#x3D; resp
+    })
+  }
+
+  findByIdDinde(id: number){
+    this.auth.getByIdUser(id).subscribe((resp: User) &#x3D;&gt; {
+      this.dinde &#x3D; resp
+    })
+  }
+
+  dindeId(event: any){
+    this.idDinde &#x3D; event.target.value
+    // this.findByIdDinde(this.idDinde)
+  }
+
+  confirmSenha(event: any) {
+    this.confirmarSenha &#x3D; event.target.value;
+  }
+
+  alterarUser(){
+    console.log(this.user)
+    console.log(this.dinde)
+
+    this.dinde.id &#x3D; this.idDinde
+    this.user.dinde &#x3D; this.dinde
+
+
+    if (this.user.senha !&#x3D; this.confirmarSenha) {
+      this.alertas.showAlertDanger(&#x27;As senhas não coincidem&#x27;);
+    } else {
+      this.auth.putUsuario(this.user).subscribe((resp: User) &#x3D;&gt; {
+        this.user &#x3D; resp;
+        this.alertas.showAlertSuccess(&#x27;Dinde registrado com sucesso. Faça o login novamente&#x27;);
+        environment.token &#x3D; &#x27;&#x27;;
+        environment.foto &#x3D; &#x27;&#x27;;
+        environment.id &#x3D; 0;
+        environment.nome &#x3D; &#x27;&#x27;;
+        console.log(this.dinde)
+        this.router.navigate([&#x27;/entrar&#x27;]);
+      }, erro &#x3D;&gt; {
+        if(erro.status &#x3D;&#x3D; 500){
+          this.alertas.showAlertDanger(&#x27;Verifique se escolheu seu dinde e se preencheu sua senha e tente novamente.&#x27;)
+        }
+  
+      });
+    }
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">
+&lt;div class&#x3D;&quot;container&quot;&gt;
+  &lt;div class&#x3D;&quot;row&quot;&gt;
+    &lt;div class&#x3D;&quot;col-md-12 my-3&quot;&gt;
+      &lt;h3 class&#x3D;&quot;text-center&quot;&gt;
+        Parece que você ainda não tem uma Dinda! Não se preocupe, escolha uma a
+        seguir:
+      &lt;/h3&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;row d-flex justify-content-center&quot;&gt;
+    &lt;div class&#x3D;&quot;col-md-12 d-flex flex-column justify-content-center&quot;&gt;
+      &lt;div *ngFor&#x3D;&quot;let user of listaUser&quot;&gt;
+        &lt;div *ngIf&#x3D;&#x27;user.tipo&#x3D;&#x3D;&quot;dinde&quot;&#x27;&gt;
+        &lt;div class&#x3D;&quot;form-check form-check-inline&quot;&gt;
+          &lt;input
+            (input)&#x3D;&#x27;dindeId($event)&#x27;
+            class&#x3D;&quot;form-check-input&quot;
+            type&#x3D;&quot;radio&quot;
+            name&#x3D;&quot;inlineRadioOptions&quot;
+            id&#x3D;&quot;inlineRadio1&quot;
+            value&#x3D;&quot;{{user.id}}&quot;
+            [(ngModel)]&#x3D;&#x27;idDinde&#x27;
+          /&gt;
+          &lt;label class&#x3D;&quot;form-check-label&quot; for&#x3D;&quot;inlineRadio1&quot;&gt;
+            &lt;div class&#x3D;&quot;card my-3&quot; style&#x3D;&quot;width: 18rem;&quot;&gt;
+                &lt;img src&#x3D;&quot;{{user.foto}}&quot; class&#x3D;&quot;card-img-top&quot; alt&#x3D;&quot;...&quot; onerror&#x3D;&quot;this.src&#x3D;&#x27;../../assets/kisspng-silhouette-woman-clip-art-nothing-grows-here-5b1a5f89a2ada1.2641022015284550496663.png&#x27;&quot;&gt;
+                &lt;div class&#x3D;&quot;card-body&quot;&gt;
+                  &lt;h5 class&#x3D;&quot;card-title&quot;&gt;{{user.nome}}&lt;/h5&gt;
+                  &lt;p class&#x3D;&quot;card-text&quot;&gt;{{user.area}}&lt;/p&gt;
+                  &lt;p class&#x3D;&quot;card-text&quot;&gt;{{user.sobre}}&lt;/p&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/label&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;row my-2&quot;&gt;
+      &lt;div class&#x3D;&quot;col-md-12&quot;&gt;
+        &lt;h5 class&#x3D;&quot;text-center&quot;&gt; Para confirmar, digite sua senha:&lt;/h5&gt;
+        &lt;div class&#x3D;&quot;form-group&quot;&gt;
+            &lt;label for&#x3D;&quot;senha&quot;&gt; Para continuar, digite sua senha: &lt;/label&gt;
+            &lt;input type&#x3D;&quot;password&quot; class&#x3D;&quot;form-control&quot; name&#x3D;&quot;senha&quot; id&#x3D;&quot;senha&quot; (input)&#x3D;&#x27;confirmSenha($event)&#x27;&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;form-group&quot;&gt;
+            &lt;label for&#x3D;&quot;senha&quot;&gt; Confirmar senha &lt;/label&gt;
+            &lt;input type&#x3D;&quot;password&quot; class&#x3D;&quot;form-control&quot; name&#x3D;&quot;confirmSenha&quot; id&#x3D;&quot;confirmSenha&quot; [(ngModel)]&#x3D;&#x27;user.senha&#x27;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;row&quot;&gt;
+      &lt;div class&#x3D;&quot;col-md-12 d-flex justify-content-center mb-3&quot;&gt;
+          &lt;button class&#x3D;&quot;btn btn-danger me-3&quot; routerLink&#x3D;&#x27;/home&#x27;&gt; Cancelar &lt;/button&gt;
+          &lt;button class&#x3D;&quot;btn btn-success&quot; (click)&#x3D;&#x27;alterarUser()&#x27;&gt; Confirmar &lt;/button&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./dinde-option.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.card-img-top{
+    width: 18rem;
+    height: 20rem;
+    
+}
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="container">  <div class="row">    <div class="col-md-12 my-3">      <h3 class="text-center">        Parece que você ainda não tem uma Dinda! Não se preocupe, escolha uma a        seguir:      </h3>    </div>  </div>  <div class="row d-flex justify-content-center">    <div class="col-md-12 d-flex flex-column justify-content-center">      <div *ngFor="let user of listaUser">        <div *ngIf=\'user.tipo=="dinde"\'>        <div class="form-check form-check-inline">          <input            (input)=\'dindeId($event)\'            class="form-check-input"            type="radio"            name="inlineRadioOptions"            id="inlineRadio1"            value="{{user.id}}"            [(ngModel)]=\'idDinde\'          />          <label class="form-check-label" for="inlineRadio1">            <div class="card my-3" style="width: 18rem;">                <img src="{{user.foto}}" class="card-img-top" alt="..." onerror="this.src=\'../../assets/kisspng-silhouette-woman-clip-art-nothing-grows-here-5b1a5f89a2ada1.2641022015284550496663.png\'">                <div class="card-body">                  <h5 class="card-title">{{user.nome}}</h5>                  <p class="card-text">{{user.area}}</p>                  <p class="card-text">{{user.sobre}}</p>                </div>              </div>          </label>        </div>    </div>      </div>    </div>  </div>  <div class="row my-2">      <div class="col-md-12">        <h5 class="text-center"> Para confirmar, digite sua senha:</h5>        <div class="form-group">            <label for="senha"> Para continuar, digite sua senha: </label>            <input type="password" class="form-control" name="senha" id="senha" (input)=\'confirmSenha($event)\'>        </div>        <div class="form-group">            <label for="senha"> Confirmar senha </label>            <input type="password" class="form-control" name="confirmSenha" id="confirmSenha" [(ngModel)]=\'user.senha\'>        </div>      </div>  </div>  <div class="row">      <div class="col-md-12 d-flex justify-content-center mb-3">          <button class="btn btn-danger me-3" routerLink=\'/home\'> Cancelar </button>          <button class="btn btn-success" (click)=\'alterarUser()\'> Confirmar </button>      </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AlertasComponent', 'selector': 'app-alertas'},{'name': 'ApadrinhadeComponent', 'selector': 'app-apadrinhade'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CadastrarComponent', 'selector': 'app-cadastrar'},{'name': 'DindeComponent', 'selector': 'app-dinde'},{'name': 'DindeOptionComponent', 'selector': 'app-dinde-option'},{'name': 'EntrarComponent', 'selector': 'app-entrar'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'OptionComponent', 'selector': 'app-option'},{'name': 'PerfilComponent', 'selector': 'app-perfil'},{'name': 'PostagemDeleteComponent', 'selector': 'app-postagem-delete'},{'name': 'PostagemEditComponent', 'selector': 'app-postagem-edit'},{'name': 'RodapeComponent', 'selector': 'app-rodape'},{'name': 'SobreComponent', 'selector': 'app-sobre'},{'name': 'TemaDeleteComponent', 'selector': 'app-tema-delete'},{'name': 'TemaEditComponent', 'selector': 'app-tema-edit'},{'name': 'TemasComponent', 'selector': 'app-temas'},{'name': 'UsuarioEditComponent', 'selector': 'app-usuario-edit'},{'name': 'VagasComponent', 'selector': 'app-vagas'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'DindeOptionComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'DindeOptionComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
