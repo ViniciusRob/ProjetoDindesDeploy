@@ -59,7 +59,7 @@ export class HomeComponent implements OnInit {
 
     this.findAllTemas()
     this.findAllPostagem()
-    // this.findByIdUser()
+    this.findByIdUser()
   }
 
   // metodos de tema
