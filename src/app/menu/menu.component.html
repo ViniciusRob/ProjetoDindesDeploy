@@ -37,12 +37,12 @@
         </li>
         <li *ngIf='auth.apadrinhade()' class="nav-item">
           <a class="nav-link border-end border-light pe-3 ps-3" (click)='dinde()'
-            >Minha Dinde</a
+            >Minhe Dinde</a
           >
         </li>
         <li *ngIf='auth.dinde()' class="nav-item">
-          <a class="nav-link border-end border-light pe-3 ps-3" href="#"
-            >Minha apadrinhada</a
+          <a class="nav-link border-end border-light pe-3 ps-3" routerLink='/apadrinhade'
+            >Minhe apadrinhade</a
           >
         </li>
         <li class="nav-item">

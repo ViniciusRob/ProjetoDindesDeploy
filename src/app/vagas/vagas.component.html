@@ -23,10 +23,7 @@
             <div *ngIf='post.vaga == true'>
           <div class="row">
             <div class="card w-100 p-3 mt-2">
-              <a href="#" class="card-link p-3 text-decoration-none green">
                 <h5>{{ post.usuario.nome }}</h5>
-              </a>
-  
               <p>
                 {{ post.data | date: "dd/MM/yyyy" }} às
                 {{ post.data | date: "HH:mm" }}
@@ -37,7 +34,7 @@
                   {{ post.texto }}
                 </p>
               </div>
-              <img src="{{post.midia}}" class="card-img-bottom" alt="..." />
+              <img src="{{post.midia}}" class="card-img-bottom" alt="..." onerror="this.src='../../assets/post.jpg'" />
             </div>
           </div>
         </div>

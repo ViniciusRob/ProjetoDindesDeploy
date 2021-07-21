@@ -27,6 +27,7 @@ import { TemasComponent } from './temas/temas.component';
 import { VagasComponent } from './vagas/vagas.component';
 import { DindeComponent } from './dinde/dinde.component';
 import { DindeOptionComponent } from './dinde-option/dinde-option.component';
+import { ApadrinhadeComponent } from './apadrinhade/apadrinhade.component';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { DindeOptionComponent } from './dinde-option/dinde-option.component';
     TemasComponent,
     VagasComponent,
     DindeComponent,
-    DindeOptionComponent
+    DindeOptionComponent,
+    ApadrinhadeComponent
   ],
   imports: [
     BrowserModule,

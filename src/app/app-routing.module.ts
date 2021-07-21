@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ApadrinhadeComponent } from './apadrinhade/apadrinhade.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { PostagemDeleteComponent } from './delet/postagem-delete/postagem-delete.component';
 import { TemaDeleteComponent } from './delet/tema-delete/tema-delete.component';
@@ -32,7 +33,8 @@ const routes: Routes = [
   {path: 'temas', component: TemasComponent},
   {path: 'vagas', component: VagasComponent},
   {path: 'dinde', component: DindeComponent},
-  {path: 'dinde-option', component: DindeOptionComponent}
+  {path: 'dinde-option', component: DindeOptionComponent},
+  {path: 'apadrinhade', component: ApadrinhadeComponent}
 
 ];
 
